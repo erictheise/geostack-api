@@ -26,7 +26,7 @@ function getAmenities(amenities, res) {
 
       var f = {
         "type": "Feature",
-        "geometry": feature.way,
+        "geometry": JSON.parse(feature.way),
         "properties": {
           "name": feature.name,
           "cuisine": getTag("cuisine")

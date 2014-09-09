@@ -32,11 +32,11 @@ to generate map tiles, as a base layer, and with [Leaflet](http://leafletjs.com)
      form is
 
      ```
-     pg://user_name:user_password@localhost/database_name
+     pg://user_name:user_password@localhost:port_number/database_name
      ```
 
   5. `npm start`
-  6. visit or make an AJAX call to `localhost:3000/amenities/` to retrieve a [GeoJSON](http://geojson.org/geojson-spec.html#examples)
+  6. visit or make an AJAX call to `http://localhost:3000/amenities/` to retrieve a [GeoJSON](http://geojson.org/geojson-spec.html#examples)
      _FeatureCollection_ of restaurants and their cuisines
 
 ```

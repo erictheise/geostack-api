@@ -23,8 +23,10 @@ The requirements for this to work are that
 The workshop demonstrates how all components of a contemporary web mapping application can be run locally, on your own
 computer, using open source software and open data. OpenStreetMap data is used with [TileMill](http://mapbox.com/tilemill/)
 and [TileStream](https://github.com/mapbox/tilestream) to generate and serve map tiles as a base layer, and with
-[Leaflet](http://leafletjs.com) to generate map overlays for points of interest. A Leaflet [GeoJSON Layer](http://leafletjs.com/reference.html#geojson)
-is created with the data served by `geostack-api`.
+[Leaflet](http://leafletjs.com) to generate map overlays for points of interest.
+
+The `dynamic.html` page in a companion repo, [geostack-map-pages](https://github.com/erictheise/geostack-map-pages),
+consumes data from this api in order to create a Leaflet [GeoJSON Layer](http://leafletjs.com/reference.html#geojson).
 
 ## Use
 

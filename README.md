@@ -1,7 +1,7 @@
 # geostack-api
 
 This is a trivial Node/Express application that's used in conjunction with my [Let's Talk About Your
-Geostack](erictheise.github.io/deck-geo-stack-deep-dive) workshop & deck.
+Geostack](http://erictheise.github.io/deck-geo-stack-deep-dive) workshop & deck.
 
 ## Requirements
 

@@ -28,8 +28,15 @@ to generate map tiles, as a base layer, and with [Leaflet](http://leafletjs.com)
   1. `git clone` this repository.
   2. `cd geostack-api`
   3. `npm install`
-  4. `npm start`
-  5. visit or make an AJAX call to `localhost:3000/amenities/` to retrieve a [GeoJSON](http://geojson.org/geojson-spec.html)
+  4. alter line 11 of `/routes/amenities.js` to account for your database name and authentication parameters. The general
+     form is
+
+     ```
+     pg://user_name:user_password@localhost/database_name
+     ```
+
+  5. `npm start`
+  6. visit or make an AJAX call to `localhost:3000/amenities/` to retrieve a [GeoJSON](http://geojson.org/geojson-spec.html#examples)
      _FeatureCollection_ of restaurants and their cuisines
 
 ```

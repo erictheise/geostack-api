@@ -7,7 +7,7 @@ Geostack](http://erictheise.github.io/deck-geo-stack-deep-dive) workshop & deck.
 
 The requirements for this to work are that
 
-  0. you have [Node](http://nodejs.com/) and `npm` installed
+  0. you have [Node](http://nodejs.org/) and `npm` installed
   1. there's a spatially-enabled ([PostgreSQL](http://postgresql.org/) + [PostGIS](http://postgis.org/)) database running on `localhost`
   2. the database contains [OpenStreetMap](http://openstreetmap.org/) data, likely a [metro extract](http://mapzen.com/metro-extracts/)
   3. the data import was done with [`osm2pgsql`](https://github.com/openstreetmap/osm2pgsql) and included all tags, meaning
@@ -20,7 +20,7 @@ The requirements for this to work are that
 ## Motivation
 
 The workshop demonstrates how all components of a contemporary web mapping application can be run locally, on your own
-computer, using open source software and open data. OpenStreetMap data is used with [TileMill]http://(mapbox.com/tilemill/)
+computer, using open source software and open data. OpenStreetMap data is used with [TileMill](http://mapbox.com/tilemill/)
 to generate map tiles, as a base layer, and with [Leaflet](http://leafletjs.com) to generate map overlays, for points of interest.
 
 ## Use

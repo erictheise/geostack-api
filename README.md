@@ -29,7 +29,8 @@ to generate map tiles, as a base layer, and with [Leaflet](http://leafletjs.com)
   2. `cd geostack-api`
   3. `npm install`
   4. `npm start`
-  5. visit or make an AJAX call to `localhost:3000/amenities/` to retrieve a GeoJSON Feature Collection of restaurants and their cuisines
+  5. visit or make an AJAX call to `localhost:3000/amenities/` to retrieve a [GeoJSON](http://geojson.org/) _FeatureCollection_
+     of restaurants and their cuisines
 
 ```
 {

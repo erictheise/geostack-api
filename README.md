@@ -26,7 +26,7 @@ and [TileStream](https://github.com/mapbox/tilestream) to generate and serve map
 [Leaflet](http://leafletjs.com) to generate map overlays for points of interest.
 
 The `dynamic.html` page in a companion repo, [geostack-map-pages](https://github.com/erictheise/geostack-map-pages),
-consumes data from this api in order to create a Leaflet [GeoJSON Layer](http://leafletjs.com/reference.html#geojson).
+consumes data from this api in order to create and display a Leaflet [GeoJSON Layer](http://leafletjs.com/reference.html#geojson).
 
 ## Use
 

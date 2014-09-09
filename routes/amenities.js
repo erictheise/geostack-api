@@ -17,7 +17,9 @@ function getAmenities(amenities, res) {
     "features": []
   };
 
-  var sql = 'SELECT name, ST_AsGeoJSON(ST_TRANSFORM(way, 4326)) AS way, tags FROM planet_osm_point WHERE amenity = \'restaurant\' AND name IS NOT NULL;';
+  var sql = "SELECT name, ST_AsGeoJSON(ST_TRANSFORM(way, 4326)) AS way, tags->'cuisine' AS cuisine " +
+    "FROM planet_osm_point " +
+    "WHERE amenity = 'restaurant' AND name IS NOT NULL;";
 
   client.query(sql, function(err, result) {
     result.rows.forEach(function(feature){
@@ -29,7 +31,7 @@ function getAmenities(amenities, res) {
         "geometry": JSON.parse(feature.way),
         "properties": {
           "name": feature.name,
-          "cuisine": getTag("cuisine")
+          "cuisine": feature.cuisine
         }
       };
       fc.features.push(f);
@@ -38,16 +40,6 @@ function getAmenities(amenities, res) {
     res.setHeader("Access-Control-Allow-Origin", "*")
     res.send(fc);
   });
-
-}
-
-function getTag(tag) {
-  var regexp = new RegExp('"' + tag + '"=>"(\\w+)"');
-  if (tags.match(regexp)) {
-    return tags.match(regexp)[1]
-  } else {
-    return null;
-  }
 
 }
 

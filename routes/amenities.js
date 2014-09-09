@@ -17,7 +17,7 @@ function getAmenities(amenities, res) {
     "features": []
   };
 
-  var sql = 'SELECT name, ST_AsGeoJSON(ST_TRANSFORM(way, 4326)) AS way, tags from planet_osm_point where amenity = \'restaurant\';';
+  var sql = 'SELECT name, ST_AsGeoJSON(ST_TRANSFORM(way, 4326)) AS way, tags FROM planet_osm_point WHERE amenity = \'restaurant\' AND name IS NOT NULL;';
 
   client.query(sql, function(err, result) {
     result.rows.forEach(function(feature){

@@ -1,7 +1,8 @@
 # geostack-api
 
-This is a trivial Node/Express application that's used in conjunction with my [Let's Talk About Your
-Geostack](http://erictheise.github.io/deck-geo-stack-deep-dive) workshop & deck.
+This is a quick & dirty Node/Express application that's used in conjunction with my [Let's Talk About Your
+Geostack](http://erictheise.github.io/deck-geo-stack-deep-dive) workshop & deck. It's the result of a basic Express
+scaffold, with `/routes/users.js` deleted, `/routes/amenities.js` added, and `/app.js` adjusted accordingly.
 
 ## Requirements
 
@@ -21,7 +22,9 @@ The requirements for this to work are that
 
 The workshop demonstrates how all components of a contemporary web mapping application can be run locally, on your own
 computer, using open source software and open data. OpenStreetMap data is used with [TileMill](http://mapbox.com/tilemill/)
-to generate map tiles, as a base layer, and with [Leaflet](http://leafletjs.com) to generate map overlays, for points of interest.
+and [TileStream](https://github.com/mapbox/tilestream) to generate and serve map tiles as a base layer, and with
+[Leaflet](http://leafletjs.com) to generate map overlays for points of interest. A Leaflet [GeoJSON Layer](http://leafletjs.com/reference.html#geojson)
+is created with the data served by `geostack-api`.
 
 ## Use
 
